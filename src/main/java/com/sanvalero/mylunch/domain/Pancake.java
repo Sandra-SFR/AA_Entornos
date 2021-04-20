@@ -14,6 +14,9 @@ public class Pancake {
 
     }
 
+    public Pancake(String masa, String tipoSirope, String tooping, String extra, int numeroPancake, double precioPancake) {
+    }
+
     public String getMasa() {
         return masa;
     }
