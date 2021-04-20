@@ -2,19 +2,24 @@ package com.sanvalero.mylunch.domain;
 
 public class Pancake {
 
+    private String extra;
     private String masa;
-    private boolean opcionSirope;
     private String tipoSirope;
-    private boolean opcionTooping;
     private String tooping;
     private int numeroPancake;
-    private double precioPancake;
+    private float precioPancake;
 
     public Pancake(){
 
     }
 
-    public Pancake(String masa, String tipoSirope, String tooping, String extra, int numeroPancake, double precioPancake) {
+    public Pancake(String masa, String tipoSirope, String tooping, String extra, int numeroPancake, float precioPancake) {
+        this.masa = masa;
+        this.tipoSirope = tipoSirope;
+        this.tooping = tooping;
+        this.extra = extra;
+        this.numeroPancake = numeroPancake;
+        this.precioPancake = precioPancake;
     }
 
     public String getMasa() {
@@ -25,28 +30,12 @@ public class Pancake {
         this.masa = masa;
     }
 
-    public boolean isOpcionSirope() {
-        return opcionSirope;
-    }
-
-    public void setOpcionSirope(boolean opcionSirope) {
-        this.opcionSirope = opcionSirope;
-    }
-
     public String getTipoSirope() {
         return tipoSirope;
     }
 
     public void setTipoSirope(String tipoSirope) {
         this.tipoSirope = tipoSirope;
-    }
-
-    public boolean isOpcionTooping() {
-        return opcionTooping;
-    }
-
-    public void setOpcionTooping(boolean opcionTooping) {
-        this.opcionTooping = opcionTooping;
     }
 
     public String getTooping() {
@@ -65,11 +54,11 @@ public class Pancake {
         this.numeroPancake = numeroPancake;
     }
 
-    public double getPrecioPancake() {
+    public float getPrecioPancake() {
         return precioPancake;
     }
 
-    public void setPrecioPancake(double precioPancake) {
+    public void setPrecioPancake(float precioPancake) {
         this.precioPancake = precioPancake;
     }
 
@@ -77,9 +66,7 @@ public class Pancake {
     public String toString() {
         return "Pancake{" +
                 "masa='" + masa + '\'' +
-                ", opcionSirope=" + opcionSirope +
                 ", tipoSirope='" + tipoSirope + '\'' +
-                ", opcionTooping=" + opcionTooping +
                 ", tooping='" + tooping + '\'' +
                 ", numeroPancake=" + numeroPancake +
                 ", precioPancake=" + precioPancake +

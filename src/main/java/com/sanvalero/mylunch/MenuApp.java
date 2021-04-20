@@ -15,6 +15,10 @@ public class MenuApp {
     private Batido batido;
     private Pancake pancake;
 
+    ArrayList<Batido> listaBatidos = new ArrayList<>();
+    ArrayList<Hamburguesa> listaHamburguesas = new ArrayList<>();
+    ArrayList<Pancake> listaPancakes = new ArrayList<>();
+
     public MenuApp(){
         salir = false;
         sc = new Scanner(System.in);
@@ -29,6 +33,9 @@ public class MenuApp {
             System.out.println("1. Crear batido");
             System.out.println("2. Crear hamburguesa");
             System.out.println("3. Crear pancake");
+            System.out.println("4. Mostrar batido");
+            System.out.println("5. Mostrar hamburguesa");
+            System.out.println("6. Mostrar pancake");
             System.out.println("x. Salir");
             System.out.println("----------------------");
             System.out.println(" ");
@@ -43,6 +50,15 @@ public class MenuApp {
                     break;
                 case "3":
                     crearPancake();
+                    break;
+                case "4":
+                    mostrarBatido(listaBatidos);
+                    break;
+                case "5":
+                    mostrarHamburguesa(listaHamburguesas);
+                    break;
+                case "6":
+                    mostrarPancakes(listaPancakes);
                     break;
                 case "x":
                     salir();
@@ -112,7 +128,7 @@ public class MenuApp {
         System.out.println("-- Introduce el precio: ");
         System.out.println("----------------------");
         System.out.println("Escribe un precio:");
-        double precioBatido = sc.nextDouble();
+        float precioBatido = sc.nextFloat();
 
         guardarDatosBatido(leche,sabor,tipoSirope,tipoTooping,numeroBatidos,precioBatido);
 
@@ -120,9 +136,7 @@ public class MenuApp {
 
     }
     // guardar opciones de 1
-    private ArrayList<Batido> guardarDatosBatido(String leche, String sabor, String tipoSirope, String tipoTooping, int numeroBatidos, double precioBatido){
-
-        ArrayList<Batido> listaBatidos = new ArrayList<>();
+    private ArrayList<Batido> guardarDatosBatido(String leche, String sabor, String tipoSirope, String tipoTooping, int numeroBatidos, float precioBatido){
 
         Batido batido = new Batido(leche,sabor,tipoSirope,tipoTooping,numeroBatidos,precioBatido);
         listaBatidos.add(batido);
@@ -186,7 +200,7 @@ public class MenuApp {
         System.out.println("-- Introduce el precio: ");
         System.out.println("----------------------");
         System.out.println("Escribe un precio:");
-        double precioHamburguesa = sc.nextDouble();
+        float precioHamburguesa = sc.nextFloat();
 
         guardarDatosHamburguesa(pan,carne,salsa,extra,numeroCarne,precioHamburguesa);
 
@@ -194,9 +208,7 @@ public class MenuApp {
 
     }
     // guardar opciones de 2
-    private ArrayList<Hamburguesa> guardarDatosHamburguesa(String pan, String carne, String salsa, String extra, int numeroCarne, double precioHamburguesa) {
-
-        ArrayList<Hamburguesa> listaHamburguesas = new ArrayList<>();
+    private ArrayList<Hamburguesa> guardarDatosHamburguesa(String pan, String carne, String salsa, String extra, int numeroCarne, float precioHamburguesa) {
 
         Hamburguesa hamburguesa = new Hamburguesa(pan,carne,salsa,extra,numeroCarne,precioHamburguesa);
         listaHamburguesas.add(hamburguesa);
@@ -260,7 +272,7 @@ public class MenuApp {
         System.out.println("-- Introduce el precio: ");
         System.out.println("----------------------");
         System.out.println("Escribe un precio:");
-        double precioPancake = sc.nextDouble();
+        float precioPancake = sc.nextFloat();
 
         guardarDatosPancakes(masa,tipoSirope,tooping,extra,numeroPancake,precioPancake);
 
@@ -268,14 +280,57 @@ public class MenuApp {
 
     }
     // guardar opciones de 3
-    private ArrayList<Pancake> guardarDatosPancakes(String masa, String tipoSirope, String tooping, String extra, int numeroPancake, double precioPancake) {
-
-        ArrayList<Pancake> listaPancakes = new ArrayList<>();
+    private ArrayList<Pancake> guardarDatosPancakes(String masa, String tipoSirope, String tooping, String extra, int numeroPancake, float precioPancake) {
 
         Pancake pancake = new Pancake(masa,tipoSirope,tooping,extra,numeroPancake,precioPancake);
         listaPancakes.add(pancake);
 
         return listaPancakes;
+    }
+    // 4. mostrar batido
+    private void mostrarBatido(ArrayList<Batido>  listaBatidos){
+
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println("El batido que has registrado es:");
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println(" ");
+
+        for (Batido batido : listaBatidos) {
+            System.out.println(batido);
+        }
+        correcto();
+    }
+    // 5. mostrar hamburguesa
+    private void mostrarHamburguesa(ArrayList<Hamburguesa> listaHamburguesas){
+
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println("La hamburguesa que has registrado es:");
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println(" ");
+
+        for (Hamburguesa hamburguesa : listaHamburguesas) {
+            System.out.println(hamburguesa);
+        }
+        correcto();
+    }
+    // 6. mostrar pancakes
+    private void mostrarPancakes(ArrayList<Pancake> listaPancakes){
+
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println("El pancakes que has registrado es:");
+        System.out.println(" ");
+        System.out.println("--------------------------------");
+        System.out.println(" ");
+
+        for (Pancake pancake : listaPancakes) {
+            System.out.println(pancake);
+        }
+        correcto();
     }
 
     private void finalRegistro(){
@@ -284,6 +339,12 @@ public class MenuApp {
         System.out.println("----------------------");
         System.out.println("Pulsa cualquier tecla para volver al menú:");
         sc.nextLine();
+        sc.nextLine();
+    }
+    private void correcto(){
+        System.out.println(" ");
+        System.out.println("----------------------");
+        System.out.println("Pulsa cualquier tecla para volver al menú:");
         sc.nextLine();
     }
 

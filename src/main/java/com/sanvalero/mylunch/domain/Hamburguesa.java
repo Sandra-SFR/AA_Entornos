@@ -6,17 +6,21 @@ public class Hamburguesa {
 
     private String pan;
     private String carne;
-    private boolean opcionSalsa;
-    private String tipoSalsa;
-    private boolean opcionAñadirExtra;
+    private String salsa;
     private String extra;
     private int numeroCarne;
-    private double precioHamburguesa;
+    private float precioHamburguesa;
 
     public Hamburguesa(){
 
     }
-    public Hamburguesa(String pan, String carne, String tipoSalsa, String opcionAñadirExtra, int numeroCarne, double precioHamburguesa) {
+    public Hamburguesa(String pan, String carne, String salsa, String extra, int numeroCarne, float precioHamburguesa) {
+        this.pan = pan;
+        this.carne = carne;
+        this.salsa = salsa;
+        this.extra = extra;
+        this.numeroCarne = numeroCarne;
+        this.precioHamburguesa = precioHamburguesa;
     }
     public String getPan() {
         return pan;
@@ -34,28 +38,11 @@ public class Hamburguesa {
         this.carne = carne;
     }
 
-    public boolean isOpcionSalsa() {
-        return opcionSalsa;
-    }
-
-    public void setOpcionSalsa(boolean opcionSalsa) {
-        this.opcionSalsa = opcionSalsa;
-    }
-
     public String getTipoSalsa() {
-        return tipoSalsa;
+        return salsa;
     }
-
-    public void setTipoSalsa(String tipoSalsa) {
-        this.tipoSalsa = tipoSalsa;
-    }
-
-    public boolean isOpcionAñadirExtra() {
-        return opcionAñadirExtra;
-    }
-
-    public void setOpcionAñadirExtra(boolean opcionAñadirExtra) {
-        this.opcionAñadirExtra = opcionAñadirExtra;
+    public void setTipoSalsa(String salsa) {
+        this.salsa = salsa;
     }
 
     public String getExtra() {
@@ -74,11 +61,11 @@ public class Hamburguesa {
         this.numeroCarne = numeroCarne;
     }
 
-    public double getPrecioHamburguesa() {
+    public float getPrecioHamburguesa() {
         return precioHamburguesa;
     }
 
-    public void setPrecioHamburguesa(double precioHamburguesa) {
+    public void setPrecioHamburguesa(float precioHamburguesa) {
         this.precioHamburguesa = precioHamburguesa;
     }
 
@@ -87,9 +74,7 @@ public class Hamburguesa {
         return "Hamburguesa{" +
                 "pan='" + pan + '\'' +
                 ", carne='" + carne + '\'' +
-                ", opcionSalsa=" + opcionSalsa +
-                ", tipoSalsa='" + tipoSalsa + '\'' +
-                ", opcionAñadirExtra=" + opcionAñadirExtra +
+                ", tipoSalsa='" + salsa + '\'' +
                 ", extra='" + extra + '\'' +
                 ", numeroCarne=" + numeroCarne +
                 ", precioHamburguesa=" + precioHamburguesa +

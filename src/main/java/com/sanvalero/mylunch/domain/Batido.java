@@ -6,18 +6,22 @@ public class Batido {
 
     private String leche;
     private String sabor;
-    private boolean opcionSirope;
     private String tipoSirope;
-    private boolean opcionTooping;
     private String tooping;
     private int numeroBatidos;
-    private double precioBatido;
+    private float precioBatido;
 
     public Batido(){
-
     }
 
-    public Batido(String leche, String sabor, String tipoSirope, String tipoTooping, int numeroBatidos, double precioBatido) {
+    public Batido(String leche, String sabor, String tipoSirope, String tooping, int numeroBatidos, float precioBatido) {
+        this.leche = leche;
+        this.sabor = sabor;
+        this.tipoSirope = tipoSirope;
+        this.tooping = tooping;
+        this.numeroBatidos = numeroBatidos;
+        this.precioBatido = precioBatido;
+
     }
 
     public String getLeche() {
@@ -36,28 +40,12 @@ public class Batido {
         this.sabor = sabor;
     }
 
-    public boolean isOpcionSirope() {
-        return opcionSirope;
-    }
-
-    public void setOpcionSirope(boolean opcionSirope) {
-        this.opcionSirope = opcionSirope;
-    }
-
     public String getTipoSirope() {
         return tipoSirope;
     }
 
     public void setTipoSirope(String tipoSirope) {
         this.tipoSirope = tipoSirope;
-    }
-
-    public boolean isOpcionTooping() {
-        return opcionTooping;
-    }
-
-    public void setOpcionTooping(boolean opcionTooping) {
-        this.opcionTooping = opcionTooping;
     }
 
     public String getTooping() {
@@ -76,11 +64,11 @@ public class Batido {
         this.numeroBatidos = numeroBatidos;
     }
 
-    public double getPrecioBatido() {
+    public float getPrecioBatido() {
         return precioBatido;
     }
 
-    public void setPrecioBatido(double precioBatido) {
+    public void setPrecioBatido(float precioBatido) {
         this.precioBatido = precioBatido;
     }
 
@@ -90,9 +78,7 @@ public class Batido {
         return "Batido{" +
                 "leche='" + leche + '\'' +
                 ", sabor='" + sabor + '\'' +
-                ", opcionSirope=" + opcionSirope +
                 ", tipoSirope='" + tipoSirope + '\'' +
-                ", opcionTooping=" + opcionTooping +
                 ", tooping='" + tooping + '\'' +
                 ", numeroBatidos=" + numeroBatidos +
                 ", precioBatido=" + precioBatido +
