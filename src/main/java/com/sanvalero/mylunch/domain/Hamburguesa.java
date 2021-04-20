@@ -1,5 +1,7 @@
 package com.sanvalero.mylunch.domain;
 
+import java.util.ArrayList;
+
 public class Hamburguesa {
 
     private String pan;
@@ -14,7 +16,8 @@ public class Hamburguesa {
     public Hamburguesa(){
 
     }
-
+    public Hamburguesa(String pan, String carne, String tipoSalsa, String opcionAñadirExtra, int numeroCarne, double precioHamburguesa) {
+    }
     public String getPan() {
         return pan;
     }

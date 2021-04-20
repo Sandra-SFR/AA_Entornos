@@ -1,5 +1,7 @@
 package com.sanvalero.mylunch.domain;
 
+import java.util.ArrayList;
+
 public class Batido {
 
     private String leche;
@@ -13,6 +15,9 @@ public class Batido {
 
     public Batido(){
 
+    }
+
+    public Batido(String leche, String sabor, String tipoSirope, String tipoTooping, int numeroBatidos, double precioBatido) {
     }
 
     public String getLeche() {
@@ -78,6 +83,7 @@ public class Batido {
     public void setPrecioBatido(double precioBatido) {
         this.precioBatido = precioBatido;
     }
+
 
     @Override
     public String toString() {
