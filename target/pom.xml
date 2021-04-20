@@ -61,7 +61,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.sanvalero.Application</mainClass>
+                                    <mainClass>com.sanvalero.mylunch.Application</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
