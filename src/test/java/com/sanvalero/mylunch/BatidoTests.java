@@ -21,5 +21,18 @@ public class BatidoTests {
 
     }
 
+    @Test
+    public void equals(){
+        Batido batido = new Batido("soja", "fresa", "chocolate","fruta", 1, 5.00f);
+        Batido batido2 = new Batido("soja", "chocolate", "chocolate","oreo", 2, 5.50f);
+        Batido batido3 = new Batido("soja", "fresa", "vainilla","fruta", 1, 5.00f);
+        Batido batido4 = new Batido("coco", "fresa", "sin","fruta", 3, 6.00f);
+
+        assertEquals(batido, batido2);
+        assertNotEquals(batido3, batido4);
+
+
+    }
+
 
 }

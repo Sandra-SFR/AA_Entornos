@@ -1,6 +1,7 @@
 package com.sanvalero.mylunch.domain;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Batido {
 
@@ -85,5 +86,16 @@ public class Batido {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Batido batido = (Batido) o;
+        return Objects.equals(leche, batido.leche);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(leche);
+    }
 }

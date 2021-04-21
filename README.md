@@ -40,6 +40,10 @@ Máquina **VisualVM** instalada que monitoriza el rendimiento y el uso de memori
 
 **Issues** de las feature documentadas en git.
 
+**Test** con Junit.
+
+
+
 
 
 
