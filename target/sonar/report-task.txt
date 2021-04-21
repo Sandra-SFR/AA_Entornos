@@ -1,0 +1,6 @@
+projectKey=org.example:AA_Entornos_SFR
+serverUrl=http://192.168.1.20
+serverVersion=8.8.0.42792
+dashboardUrl=http://192.168.1.20/dashboard?id=org.example%3AAA_Entornos_SFR
+ceTaskId=AXjz-iv-LOyxLqwdzgMe
+ceTaskUrl=http://192.168.1.20/api/ce/task?id=AXjz-iv-LOyxLqwdzgMe
