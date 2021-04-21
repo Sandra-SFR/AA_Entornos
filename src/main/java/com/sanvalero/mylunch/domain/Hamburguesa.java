@@ -38,10 +38,10 @@ public class Hamburguesa {
         this.carne = carne;
     }
 
-    public String getTipoSalsa() {
+    public String getSalsa() {
         return salsa;
     }
-    public void setTipoSalsa(String salsa) {
+    public void setSalsa(String salsa) {
         this.salsa = salsa;
     }
 

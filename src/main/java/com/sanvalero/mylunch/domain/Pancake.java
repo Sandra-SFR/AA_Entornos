@@ -42,6 +42,14 @@ public class Pancake {
         return tooping;
     }
 
+    public String getExtra() {
+        return extra;
+    }
+
+    public void setExtra(String extra) {
+        this.extra = extra;
+    }
+
     public void setTooping(String tooping) {
         this.tooping = tooping;
     }
